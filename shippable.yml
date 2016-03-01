@@ -9,6 +9,9 @@ node_js:
   #- iojs-v2
   #- iojs-v3
   - 5.0
+branches:
+  only:
+    - master
     
 
 
