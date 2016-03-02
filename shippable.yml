@@ -35,5 +35,5 @@ build:
 integrations:
   hub:
     - integrationName: ship-pdr
-      type: private docker registry
+      type: private docker registry  
  
