@@ -24,7 +24,7 @@ build:
   #  pull: false
    # options: '--privil   - shippable_cache_containereged=true --net=bridge -e FOO=true -e BOO=false'
 
-  ci:
+  ci: 
     - ps -eax
     - shippable_cache_container
     - ls -al
