@@ -3,18 +3,40 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  - 0.12
-# - 4.2.3
+  #- 0.12
+  #- 4.2.3
   #- iojs-v1
   #- iojs-v2
   #- iojs-v3
+  #- 5.0
 
-  
+build:
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock2_sample_node2 .
 
-build:  
+  pre_ci_boot:
+    image_name: shippabledocker/shiphitchcock2_sample_node2
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+    
+    
   ci:
     - node --version
+    - ps -eax
+    - ls -al 
+
+  post_ci:
+   # - docker build -t=shippabledocker/shiphitchcock2_sample_node2
+    - docker push shippabledocker/shiphitchcock2_sample_node2
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker   
+
    
-    
+
+  
   
  
