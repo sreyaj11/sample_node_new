@@ -38,6 +38,6 @@ integrations:
     - integrationName: ship-pdr
       type: private docker registry
 
- 
+   
 
  
