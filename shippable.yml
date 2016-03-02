@@ -1,42 +1,43 @@
+
+# Language setting
 language: node_js
 
 # Version number
 node_js:
-  - 0.10
   - 0.12
-  - 4.2.3
-  - iojs-v1
-  - iojs-v2
-  - iojs-v3
-  - 5.0
+
+env:
+  global:
+    - FOO=FUBU
+
+  matrix:
+    - M1=ONE
 
 build:
-  cache: true
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock2_sample_node2 .
+  
+  #pre_ci:
+   # - docker build -t=shippabledocker/shiphitchcock1_sample_node .
 
-  pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock2_sample_node2
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-    
-    
+  #pre_ci_boot:
+   # image_name: shippabledocker/shiphitchcock1_sample_node
+  #  image_tag: latest
+  #  pull: false
+   # options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
   ci:
-    - node --version
     - ps -eax
-    - ls -al 
+    - ls -al
+    
+  cache: true
 
-  post_ci:
-   # - docker build -t=shippabledocker/shiphitchcock2_sample_node2
-    - docker push shippabledocker/shiphitchcock2_sample_node2
+  #post_ci:
+   # - docker push shippabledocker/shiphitchcock1_sample_node
 
-integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker   
+#integrations:
+ # hub:
+  #  - integrationName: ship-docker
+   #   type: docker    
 
-   
 
   
   
