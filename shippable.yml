@@ -4,16 +4,25 @@ language: node_js
 node_js:
   - 0.10
   - 0.12
-# - 4.2.3
-  #- iojs-v1
-  #- iojs-v2
-  #- iojs-v3
-
+  - 4.2.3
+  - iojs-v1
+  - iojs-v2
+  - iojs-v3
+  - 5.0
+env:
+  global:
+    - secure: Bzfo2XapqQbBey68tL0HbMfTyRdJfScILAN3ce2gu2riwKFlo0kLeH5oML36suVSorR591iZYkaMzxyDMNiYPqrRFH5gF8x4kQWCRFD41Iv+7y+KeXH3SR3Sxp1fylmuniE+slV+VMHPSQTXzykJVTk/SnbRc4+HbUPysJjtrE5ySpbtxJvXzajWpnvnBEnes/TwoUzpJtTcLM5UTLyD0TBPpWKxvNM31WRD/gtANz/kvTgDTJzD/uGDKipUl4BRXMm4DNBuO3D3YwZseY7jlbaXQxDDoUXcUGl//USI3qcCVHrDE7r5lCpycYCSeUib/N5qnWKJ7IRn3AhWiMmjIg==
+    - TOO=TUBU
+  matrix:
+    - secure: M7mHHXcOM3b5vpruafumJ6agyy0zYuceGBvBAF2qdAclCvMRRUIdTP3aHMBoSNQJ7CWMKuzomHxrQGjezbvy6dnbf4yyT5c80GEwyIesUEhzmJHR/oHA4kAPOWmtJNVGoeJaYI7F1z8fosVg7/eLu668WEPaIKBMi7272YduwvI5WLZefH7XxBE0qW98l6lBi/Ad1QU4FmIviHHx2oa4DOP/cjInl8Cvmxtx3uvy9amGTVFmhmxPdkDbCkgr4xp9Sa/MZ87I87Yazf93rfW7fgmBL461ifX8c+BSiKE5OW9Z31A5v4kTwkXkKsxisMmIkVJUetZ1DElvEfvx2ssYWA==
+    - GOO=GUBU
   
 
-build:  
+build:
   ci:
     - node --version
+    - echo $FOO
+    - echo $M1  
    
     
   
