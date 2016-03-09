@@ -28,10 +28,10 @@ build:
     - ls -al 
 
   post_ci:
-   # - docker build -t=shippabledocker/shiphitchcock2_sample_node2
+    - docker build -t=shippabledocker/shiphitchcock2_sample_node2:tip
     - docker push shippabledocker/shiphitchcock2_sample_node2:tip
    # - docker push shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
-    - docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:tip
+   # - docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:tip
     #- docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
 
 integrations:
@@ -40,7 +40,3 @@ integrations:
       type: docker   
 
    
-
-  
-  
- 
