@@ -39,7 +39,7 @@ integrations:
   hub:
     - integrationName: ship-docker
       type: docker    
-      branches:
-        except:
-          - preci        
+      #branches:
+      #  except:
+       #   - preci        
       
