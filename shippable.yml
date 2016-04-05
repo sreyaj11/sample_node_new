@@ -40,6 +40,6 @@ integrations:
     - integrationName: ship-docker
       type: docker    
       branches:
-        only:
+        except:
           - preci
       
