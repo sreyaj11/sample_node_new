@@ -26,7 +26,7 @@ build:
     - node --version
     - ps -eax
     - ls -al 
-    - thrhj  
+
 
   post_ci:
     - docker push shippabledocker/shiphitchcock4_sample_node21
