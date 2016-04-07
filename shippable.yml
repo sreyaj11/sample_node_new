@@ -41,7 +41,7 @@ integrations:
     - integrationName: ship-docker
       type: docker    
       #branches:
-      #  except:
+      #  except:   
        #   - preci            
       
  
