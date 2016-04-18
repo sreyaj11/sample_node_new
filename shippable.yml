@@ -29,8 +29,8 @@ build:
 
 
   post_ci:
-    - docker build -t=shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER .
-    - docker push shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER
+    - docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
+    - docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
    # - docker push shippabledocker/shiphitchcock4_sample_node21
     #- docker build -t=shippabledocker/shiphitchcock4_sample_node2 .
    # - docker push shippabledocker/shiphitchcock4_sample_node21
