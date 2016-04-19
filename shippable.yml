@@ -12,8 +12,8 @@ node_js:
 
 build:
  # cache: true
-  #pre_ci:
-   # - docker build -t=shippabledocker/shiphitchcock4_sample_node21 .
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock4_sample_node21 .
 
   pre_ci_boot:
     image_name: shippabledocker/shiphitchcock4_sample_node21
@@ -29,9 +29,9 @@ build:
 
 
   post_ci:
-    - docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
-    - docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
-   # - docker push shippabledocker/shiphitchcock4_sample_node21
+    #- docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
+    #- docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
+    - docker push shippabledocker/shiphitchcock4_sample_node21
     #- docker build -t=shippabledocker/shiphitchcock4_sample_node2 .
    # - docker push shippabledocker/shiphitchcock4_sample_node21
    # - docker push shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
