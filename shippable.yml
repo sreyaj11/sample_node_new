@@ -11,7 +11,7 @@ node_js:
  # - 5.0
 
 build:
- # cache: true
+
   pre_ci:
     - docker build -t=shippabledocker/shiphitchcock4_sample_node21 .
 
