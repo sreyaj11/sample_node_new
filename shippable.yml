@@ -13,10 +13,10 @@ node_js:
 build:
 
   pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock4_sample_node21new  .
+    - docker build -t=shippabledocker/shiphitchcock4_sample_node21  .
 
   pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock4_sample_node21new
+    image_name: shippabledocker/shiphitchcock4_sample_node21
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -31,7 +31,7 @@ build:
   post_ci:
     #- docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
     #- docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
-    - docker push shippabledocker/shiphitchcock4_sample_node21new
+    - docker push shippabledocker/shiphitchcock4_sample_node21
     #- docker build -t=shippabledocker/shiphitchcock4_sample_node2 .
    # - docker push shippabledocker/shiphitchcock4_sample_node21
    # - docker push shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
