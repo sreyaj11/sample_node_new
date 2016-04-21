@@ -39,7 +39,7 @@ build:
     #- docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
 
 integrations:
-  hub:
+  hub: 
     - integrationName: ship-docker
       type: docker    
       #branches:
