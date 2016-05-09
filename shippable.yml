@@ -44,8 +44,4 @@ integrations:
       type: docker    
       #branches:
       #  except:     
-       #   - preci              
-             
-                 
-      
-       
+       #   - preci        
